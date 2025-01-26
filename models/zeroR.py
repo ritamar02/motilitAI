@@ -3,7 +3,7 @@ import numpy as np
 import math
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 
-SEMEN_DATA = '/mnt/data/datasets/visem-dataset/01-labels-stats/semen_analysis_data.csv'
+SEMEN_DATA = './data/raw/semen_analysis_data.csv'
 
 PATIENT_RELATED = ['abstinence', 'age']
 MOTILITY_LABELS = [
@@ -85,9 +85,9 @@ def zero_r(fold_files, fold_labels):
 
 if __name__ == '__main__':
     fold_files = [
-        '/mnt/data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_1.csv',
-        '/mnt/data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_2.csv',
-        '/mnt/data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_3.csv'
+        './data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_1.csv',
+        './data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_2.csv',
+        './data/datasets/visem-dataset/05-bow-features/imsd/5s-hop/BoW/2500/1/imsd_feature_vectors_fold_3.csv'
     ]
     mae1, rmse1 = zero_r(fold_files=[fold_files[1], fold_files[2], fold_files[0]], fold_labels=MORPHOLOGY_LABELS)
     mae2, rmse2 = zero_r(fold_files=[fold_files[0], fold_files[2], fold_files[2]], fold_labels=MORPHOLOGY_LABELS)

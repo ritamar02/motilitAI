@@ -77,7 +77,7 @@ def create_bow(i,
 
 def apply_codebook(i, o, b, l=None, norm=None):
     command = [
-        "java", "-Xms12g", "-jar", f"{PATH}/openXBOW.jar", "-i", i, "-o", o, "-b", b,
+        "java", "-Xms8g", "-jar", f"{PATH}/openXBOW.jar", "-i", i, "-o", o, "-b", b,
         "-writeName"
     ]
     if l:

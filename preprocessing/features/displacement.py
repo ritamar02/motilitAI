@@ -127,7 +127,7 @@ if __name__ == "__main__":
     basepath = "./data/processed/cut-videos"
     output_base = "./features/displacement"
 
-    videos = sorted(list(glob(f'{basepath}/**/*.mp4')))
+    videos = sorted(list(glob(f'{basepath}/**/*.avi')))
     for v in tqdm(videos):
         fold = f"{dirname(relpath(v, basepath))}"
         extract_displacement_features(input_video=v,

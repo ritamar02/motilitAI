@@ -37,7 +37,7 @@ if __name__ == "__main__":
     help='Number of random grid serach iterations.')
     parser.add_argument('-l', '--target-labels', type=str, choices=['motility', 'morphology'],
                         default='motility', help='Target labels (default: motility)')
-    parser.add_argument('-sd', '--semen-data', type=str, default='sement_data_analysis.csv', help='Path to semen_data_analysis csv file.')
+    parser.add_argument('-sd', '--semen-data', type=str, default='semen_data_analysis.csv', help='Path to semen_data_analysis csv file.')
     args = parser.parse_args()
     fold_dataframes = [pd.read_csv(f) for f in args.feature_files]
     for df in fold_dataframes:

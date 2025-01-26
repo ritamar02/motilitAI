@@ -8,7 +8,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from hparams import *
 from os import makedirs
 
-SEMEN_DATA = 'semen_analysis_data.csv'
+SEMEN_DATA = './data/raw/semen_analysis_data.csv'
 
 MOTILITY_LABELS = [
     'Progressive motility (%)', 'Non progressive sperm motility (%)',
